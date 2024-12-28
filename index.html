@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="JS/main.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="sidebar-active" />
+      <label for="sidebar-active" class="open-sidebar-button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="32px"
+          viewBox="0 -960 960 960"
+          width="32px"
+          fill="undefined"
+        >
+          <path
+            d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+          />
+        </svg>
+      </label>
+      <label id="overlay" for="sidebar-active"></label>
+      <div class="links-container">
+        <label for="sidebar-active" class="close-sidebar-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="32px"
+            viewBox="0 -960 960 960"
+            width="32px"
+            fill="undefined"
+          >
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+            />
+          </svg>
+        </label>
+        <a href="" class="nav-heading">eQuosis</a>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#booking">Book</a>
+      </div>
+    </nav>
+    <section class="home" id="home">
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <h1 class="equosis-heading" data-aos="fade-down">eQuosis</h1>
+      <h2 class="home-h2" data-aos="fade-up">The Winter Company</h2>
+      <a href="#services" data-aos="zoom-in-up" class="join-btn-a">
+        <button href="#services">
+          <img
+            src="COMPONENTS/JOIN-NOW.png"
+            class="join-now-btn"
+            style="cursor: pointer"
+            onclick=""
+          />
+        </button>
+      </a>
+    </section>
+    <section class="services" id="services">
+      <h1 id="services-heading" data-aos="fade-down">OUR SERVICES</h1>
+      <div class="service-style service-left" data-aos="fade-right">
+        <img src="IMG/SKIING.jpeg" alt="" />
+        <div>
+          <h1>SKIING</h1>
+          <p>
+            Discover the thrill of skiing and snowboarding on trails designed
+            for all skill levels. Enjoy stunning snow-covered landscapes,
+            well-maintained slopes, and gear rentals with professional lessons
+            available. Adventure and unforgettable views await!
+          </p>
+        </div>
+      </div>
+      <div class="service-style service-right" data-aos="fade-left">
+        <div>
+          <h1>SNOWBALL FIGHTING</h1>
+          <p>
+            Unleash your playful side in our dedicated snowball fight zones,
+            perfect for friendly battles and family fun. Equipped with safe,
+            open spaces and plenty of fresh snow, it’s the ultimate spot to
+            enjoy winter laughs and create unforgettable memories.
+          </p>
+        </div>
+        <img src="IMG/SNOW-FIGHT.png" width="275" alt="" />
+      </div>
+    </section>
+    <section class="booking" id="booking" style="overflow: hidden">
+      <h1 class="booking-heading" data-aos="zoom-in-down">BOOKING</h1>
+      <h2 class="enroll-text" data-aos="zoom-in-up">
+        Enroll for our exciting adventures
+      </h2>
+      <div
+        class="book book-1 closed"
+        style="overflow: hidden"
+        data-aos="flip-down"
+      >
+        <h1 style="overflow: hidden">SKIING</h1>
+        <h2 style="overflow: hidden">
+          To book, you need to know the following things:
+          <p>You shouldn't bring any outside foods.</p>
+          <p>You must use ADCD credit card for the payment.</p>
+          <p>Discount cards is not accepted.</p>
+          <p>It is your own responsibility</p>
+        </h2>
+        <form action="submit" class="form-hide form-1">
+          <p class="form-label">Card Number:</p>
+          <input type="number" class="form-input card-number" />
+          <p class="form-label">CVV:</p>
+          <input type="number" class="form-input cvv" />
+          <p class="form-label">EXP Date(MM-YY):</p>
+          <input type="number" class="form-input exp-date" />
+          <input type="button" value="PAY 225AED" class="pay-button" />
+        </form>
+        <svg
+          width="40"
+          height="21"
+          viewBox="0 0 40 21"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="dropdown-1 drop-closed"
+        >
+          <path
+            d="M39 1L20 20L1 1"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <div class="book book-2 closed" data-aos="flip-down">
+        <h1>SNOW FIGHT</h1>
+        <h2>
+          To book, you need to know the following things:
+          <p>You shouldn't bring any outside foods.</p>
+          <p>You must use Dubai credit card for the payment.</p>
+          <p>Discount cards is accepted.</p>
+          <p>Don't ruin the decorations.</p>
+        </h2>
+        <form action="submit" class="form-hide form-2">
+          <p class="form-label">Card Number:</p>
+          <input type="number" class="form-input card-number" />
+          <p class="form-label">CVV:</p>
+          <input type="number" class="form-input cvv" />
+          <p class="form-label">EXP Date(MM-YY):</p>
+          <input type="number" class="form-input exp-date" />
+          <input type="button" value="PAY 225AED" class="pay-button" />
+        </form>
+        <svg
+          width="40"
+          height="21"
+          viewBox="0 0 40 21"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="dropdown-2 drop-closed"
+        >
+          <path
+            d="M39 1L20 20L1 1"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </section>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

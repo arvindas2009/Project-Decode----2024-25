@@ -1,0 +1,721 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #585858;
+  transition: 0.1s ease-in-out;
+}
+
+.snowfall {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  height: 1021px;
+}
+
+.snowflake {
+  --small: 3px;
+  --medium: 7px;
+  width: var(--small);
+  height: var(--small);
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  top: -1.3%;
+  left: 10%;
+  animation: snow 6s linear infinite, wind 10s ease-in-out infinite;
+}
+
+.snowflake:nth-child(2n + 3) {
+  width: var(--medium);
+  height: var(--medium);
+}
+
+.snowflake:nth-child(1) {
+  left: 25%;
+  animation-delay: 1s;
+}
+.snowflake:nth-child(2) {
+  left: 35%;
+  animation-delay: 5.4s;
+}
+.snowflake:nth-child(3) {
+  left: 60%;
+  animation-delay: 3.5s;
+}
+.snowflake:nth-child(4) {
+  left: 80%;
+  animation-delay: 7.6s;
+}
+.snowflake:nth-child(5) {
+  left: 10%;
+  animation-delay: 9.5s;
+}
+.snowflake:nth-child(6) {
+  left: 50%;
+  animation-delay: 3s;
+}
+.snowflake:nth-child(7) {
+  left: 84%;
+  animation-delay: 4.2s;
+}
+.snowflake:nth-child(8) {
+  left: 90%;
+  animation-delay: 1.5s;
+}
+.snowflake:nth-child(9) {
+  left: 45%;
+  animation-delay: 0.5s;
+}
+.snowflake:nth-child(10) {
+  left: 95%;
+  animation-delay: 2s;
+}
+
+@keyframes snow {
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes wind {
+  50% {
+    transform: translateX(120px);
+  }
+}
+
+:root {
+  --color1: rgba(41, 41, 41, 0.6);
+  --text-color: #f0f0f0;
+  --accent-color: #00a2ff53;
+}
+
+nav {
+  height: 60px;
+  background-color: var(--color1);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  z-index: 100;
+  backdrop-filter: blur(3px);
+  overflow: hidden;
+}
+
+.links-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav .nav-heading {
+  margin-right: auto;
+  font-size: 25px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: "Montserrat";
+  text-align: center;
+  transition: 0.1s ease-in-out;
+}
+
+nav a:hover {
+  background-color: var(--accent-color);
+  font-size: larger;
+}
+
+nav svg {
+  fill: var(--text-color);
+}
+#sidebar-active {
+  display: none;
+}
+.open-sidebar-button,
+.close-sidebar-button {
+  display: none;
+}
+
+.background {
+  width: 100%;
+  object-fit: cover;
+  position: static;
+  @media (width < 80em) {
+    opacity: 0;
+  }
+}
+
+.home {
+  background: url(/IMG/Group_Ski.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+}
+.join-btn-a {
+  align-self: center;
+}
+
+.equosis-heading {
+  position: relative;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 150px;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(204, 224, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media (width < 60em) {
+    top: 10%;
+    font-size: 30px;
+  }
+}
+
+.home-h2 {
+  position: relative;
+  font-family: "Montserrat";
+  font-weight: 500;
+  text-shadow: black;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media (width < 60em) {
+    top: 18%;
+  }
+}
+
+.home button {
+  position: relative;
+  margin-top: 20px;
+  align-self: center;
+  justify-self: center;
+  background-color: transparent;
+  border: transparent;
+  overflow-y: hidden;
+  transition: 0.1s ease-in-out;
+}
+
+.home button:hover,
+.home button img:hover {
+  position: inherit;
+  width: 230px;
+  transition: 0.15s ease-out;
+}
+
+.home button img {
+  width: 200px;
+  transition: 0.1s ease-in-out;
+}
+.services {
+  background: url(/IMG/SNOW-FALL.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #464a4d;
+  height: 600px;
+}
+
+#services-heading {
+  position: relative;
+  font-family: "Montserrat";
+  font-size: 40px;
+  text-align: center;
+  margin-top: 2%;
+  color: white;
+  text-shadow: 0 2px 2px #6d7174;
+}
+
+.service-style {
+  background-color: rgba(203, 231, 255, 0.6);
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-top: 50px;
+  width: 770px;
+  height: auto;
+  align-items: center;
+}
+
+.service-style h1 {
+  font-family: "montserrat";
+  font-size: 35px;
+  color: white;
+}
+
+.service-left {
+  border-radius: 0 50px 50px 0;
+}
+.services p {
+  font-family: "montserrat";
+  width: 500px;
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  text-shadow: 0.5px 0.5px rgb(99, 99, 99);
+}
+
+.service-left img {
+  position: relative;
+  scale: 0.8;
+}
+
+.services div img {
+  scale: 0.8;
+  border-radius: 25px;
+}
+
+.service-right {
+  float: right;
+  border-radius: 50px 0 0 50px;
+  width: auto;
+}
+
+.service-right h1 {
+  align-self: flex-end;
+  float: right;
+}
+
+.service-right p {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.service-right div {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking {
+  background-image: url(/IMG/SNOW-OVERLAY.png), url(/IMG/PLANE-FLY.jpg);
+  background-repeat: no-repeat, repeat;
+  background-size: cover, cover;
+  min-height: 100vh;
+  max-height: 120vh;
+}
+
+.booking-heading {
+  font-family: "Montserrat";
+  font-size: 40px;
+  position: relative;
+  margin-top: 2%;
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 2px black;
+}
+
+.enroll-text {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 20px;
+  position: relative;
+  text-align: center;
+  color: white;
+  text-shadow: 0 1px 0.5px black;
+}
+
+.book {
+  height: 300px;
+  width: 500px;
+  background-color: rgb(176, 176, 176);
+  position: relative;
+  border-radius: 50px;
+  margin-top: 5%;
+  background-image: url(/IMG/ICE-TEXTURE.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 2px 2px 5px black;
+}
+
+.book h1 {
+  color: white;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 40px;
+  margin-top: 2%;
+  overflow: hidden;
+}
+.book h2 {
+  position: relative;
+  font-family: "Montserrat";
+  font-size: 25px;
+  color: white;
+  overflow: hidden;
+}
+
+.book h2 p {
+  font-size: 20px;
+  font-weight: 400;
+  width: 400px;
+  text-align: center;
+  justify-self: center;
+  margin-top: 2%;
+  overflow: hidden;
+}
+
+.book svg {
+  margin-top: 3%;
+  cursor: pointer;
+}
+
+.book-1 {
+  float: left;
+  margin-left: 5%;
+}
+
+.book-2 {
+  float: right;
+  margin-right: 5%;
+}
+
+.closed {
+  animation: bookclose 1s ease-in-out forwards;
+}
+
+@keyframes bookclose {
+  0% {
+    height: 580px;
+  }
+  100% {
+    height: 350px;
+  }
+}
+
+.opened {
+  height: 580px;
+  animation: open 0.5s ease-in-out;
+}
+
+@keyframes open {
+  0% {
+    height: 350px;
+  }
+  100% {
+    height: 580px;
+  }
+}
+
+.drop-open {
+  justify-self: baseline;
+  display: flex;
+  rotate: 180deg;
+  animation: dropopen 1s forwards;
+}
+
+@keyframes dropopen {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 180deg;
+  }
+}
+
+form {
+  overflow: hidden;
+}
+
+.form-hide {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.drop-closed {
+  animation: dropclose 1s forwards;
+}
+@keyframes dropclose {
+  0% {
+    rotate: 180deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+
+.form-label {
+  font-family: "Montserrat";
+  text-align: left;
+  margin-left: 10%;
+  color: white;
+  margin-top: 10px;
+}
+
+.form-input {
+  border-radius: 20px;
+  height: 30px;
+  width: 400px;
+  overflow-x: hidden;
+  margin-top: 2%;
+  position: relative;
+  border: none;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.card-number,
+.cvv,
+.exp-date {
+  width: 400px;
+}
+
+.pay-button {
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  width: 150px;
+  height: 40px;
+  font-family: "Montserrat";
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+@media (max-width: 40em) {
+  nav {
+    height: 60px;
+    backdrop-filter: none;
+    position: fixed;
+    overflow: hidden;
+  }
+  .links-container {
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 90vw;
+    height: 100vh;
+    background-color: rgba(65, 65, 65, 0.53);
+    backdrop-filter: blur(10px);
+    transition: right 0.75s ease-in-out;
+  }
+
+  nav a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+  }
+
+  .open-sidebar-button,
+  .close-sidebar-button {
+    padding: 20px;
+    display: block;
+  }
+
+  #sidebar-active:checked ~ .links-container {
+    right: 0;
+  }
+
+  #sidebar-active:checked ~ #overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+
+  .home {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .equosis-heading {
+    font-size: 80px;
+    top: 0%;
+  }
+  .home-h2 {
+    position: relative;
+    top: 0%;
+  }
+  .join-btn-a {
+    position: relative;
+  }
+
+  .services {
+    height: 110vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #services-heading {
+    margin-top: 10%;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+
+  .service-style {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    height: 400px;
+    border-radius: 40px;
+    height: 420px;
+    justify-content: center;
+  }
+
+  .service-left h1 {
+    text-align: center;
+    font-size: 30px;
+  }
+  .service-left div p {
+    text-align: center;
+    width: 300px;
+    font-size: 18px;
+  }
+
+  .service-right {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    height: 380px;
+  }
+
+  .service-right img {
+    position: relative;
+  }
+
+  .service-right div h1 {
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .service-right div p {
+    width: 300px;
+    text-align: center;
+    align-self: center;
+  }
+
+  .booking {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    max-height: 180vh;
+  }
+
+  .book {
+    width: 98vw;
+    justify-self: center;
+    align-self: center;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  .book h1 {
+    margin-top: 4%;
+  }
+
+  .book h2 {
+    font-weight: 500;
+  }
+
+  .book h2 p {
+    margin-top: 2%;
+  }
+
+  .closed {
+    animation: bookclose 1s ease-in-out forwards;
+  }
+
+  @keyframes bookclose {
+    0% {
+      height: 600px;
+    }
+    100% {
+      height: 350px;
+    }
+  }
+
+  .opened {
+    height: 600px;
+    animation: open 0.5s forwards;
+  }
+  @keyframes open {
+    0% {
+      height: 300px;
+    }
+    100% {
+      height: 600px;
+    }
+  }
+
+  .booking-heading {
+    font-size: 50px;
+  }
+
+  .form-input {
+    width: 80vw;
+  }
+
+  .pay-button {
+    width: 80vw;
+    height: 40px;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  .emroll-text {
+    font-size: 30px;
+  }
+}
