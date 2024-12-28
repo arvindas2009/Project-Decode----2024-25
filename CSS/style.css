@@ -172,7 +172,7 @@ nav svg {
 }
 
 .home {
-  background: url(/IMG/Group_Ski.jpg);
+  background: url(../IMG/Group_Ski.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -249,7 +249,7 @@ nav svg {
   transition: 0.1s ease-in-out;
 }
 .services {
-  background: url(/IMG/SNOW-FALL.png);
+  background: url(../IMG/SNOW-FALL.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #464a4d;
@@ -327,7 +327,7 @@ nav svg {
 }
 
 .booking {
-  background-image: url(/IMG/SNOW-OVERLAY.png), url(/IMG/PLANE-FLY.jpg);
+  background-image: url(../IMG/SNOW-OVERLAY.png), url(../IMG/PLANE-FLY.jpg);
   background-repeat: no-repeat, repeat;
   background-size: cover, cover;
   min-height: 100vh;
@@ -361,7 +361,7 @@ nav svg {
   position: relative;
   border-radius: 50px;
   margin-top: 5%;
-  background-image: url(/IMG/ICE-TEXTURE.png);
+  background-image: url(../IMG/ICE-TEXTURE.png);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
